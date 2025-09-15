@@ -36,3 +36,6 @@ export const dynamicSlideLayout: React.FC<ThankYouSlideLayoutProps> = ({ data: s
     </div>
   )
 }
+
+export default dynamicSlideLayout
+export { layoutId, layoutName, layoutDescription, Schema }

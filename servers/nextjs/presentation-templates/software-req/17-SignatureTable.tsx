@@ -69,3 +69,6 @@ export const dynamicSlideLayout: React.FC<SignatureTableSlideLayoutProps> = ({ d
         </div>
     )
 }
+
+export default dynamicSlideLayout
+export { layoutId, layoutName, layoutDescription, Schema }

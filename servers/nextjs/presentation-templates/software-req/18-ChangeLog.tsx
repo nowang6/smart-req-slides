@@ -48,3 +48,6 @@ export const dynamicSlideLayout: React.FC<ChangeLogSlideLayoutProps> = ({ data: 
         </>
     )
 }
+
+export default dynamicSlideLayout
+export { layoutId, layoutName, layoutDescription, Schema }

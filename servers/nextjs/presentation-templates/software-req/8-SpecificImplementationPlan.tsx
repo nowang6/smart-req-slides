@@ -44,3 +44,6 @@ const dynamicSlideLayout: React.FC<Partial<DynamicSlideLayoutData>> = ({
         </div>
     )
 }
+
+export default dynamicSlideLayout
+export { layoutId, layoutName, layoutDescription, Schema }

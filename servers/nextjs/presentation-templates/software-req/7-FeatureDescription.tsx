@@ -67,3 +67,6 @@ const dynamicSlideLayout: React.FC<CharacteristicDescriptionSlideProps> = ({ dat
         </div>
     )
 }
+
+export default dynamicSlideLayout
+export { layoutId, layoutName, layoutDescription, Schema }

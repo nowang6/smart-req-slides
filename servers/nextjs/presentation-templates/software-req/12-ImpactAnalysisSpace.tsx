@@ -60,3 +60,6 @@ export const dynamicSlideLayout: React.FC<ImpactAnalysisSpaceSlideLayoutProps> =
         </>
     )
 }
+
+export default dynamicSlideLayout
+export { layoutId, layoutName, layoutDescription, Schema }

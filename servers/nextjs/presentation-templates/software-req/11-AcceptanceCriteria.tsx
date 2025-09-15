@@ -46,3 +46,6 @@ export const dynamicSlideLayout: React.FC<{ data?: Partial<AcceptanceCriteriaSli
         </div>
     )
 }
+
+export default dynamicSlideLayout
+export { layoutId, layoutName, layoutDescription, Schema }

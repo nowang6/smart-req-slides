@@ -88,3 +88,6 @@ const dynamicSlideLayout: React.FC<DocumentClarificationSlideLayoutProps> = ({ d
     )
 }
 
+
+export default dynamicSlideLayout
+export { layoutId, layoutName, layoutDescription, Schema }
