@@ -1,11 +1,11 @@
 import React from 'react'
 import { z } from 'zod'
 
-export const layoutId = "change-log-slide"
-export const layoutName = "dynamicSlideLayout"
-export const layoutDescription = "A slide with a title, main description, and additional details at the bottom."
+const layoutId = "change-log-slide"
+const layoutName = "dynamicSlideLayout"
+const layoutDescription = "A slide with a title, main description, and additional details at the bottom."
 
-export const Schema = z.object({
+const Schema = z.object({
     title: z.string().min(1).max(20).default("变更记录").meta({
         description: "Main title of the slide. Max 20 characters",
     }),

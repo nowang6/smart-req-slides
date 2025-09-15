@@ -1,11 +1,11 @@
 import React from 'react'
 import { z } from 'zod'
 
-export const layoutId = "impact-analysis-space-slide"
-export const layoutName = "Impact Analysis Space"
-export const layoutDescription = "A slide with a header, two highlighted text sections, and footer information."
+const layoutId = "impact-analysis-space-slide"
+const layoutName = "Impact Analysis Space"
+const layoutDescription = "A slide with a header, two highlighted text sections, and footer information."
 
-export const Schema = z.object({
+const Schema = z.object({
     header: z.string().min(1).max(64).default("周边影响分析 - 空间").meta({
         description: "Header title of the slide"
     }),

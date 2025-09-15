@@ -1,11 +1,11 @@
 import React from 'react'
 import { z } from 'zod'
 
-export const layoutId = "header-description-slide"
-export const layoutName = "DynamicSlideLayout"
-export const layoutDescription = "A slide with a header, description, and footer."
+const layoutId = "header-description-slide"
+const layoutName = "DynamicSlideLayout"
+const layoutDescription = "A slide with a header, description, and footer."
 
-export const Schema = z.object({
+const Schema = z.object({
     header: z.string().min(1).max(100).default("周边影响分析 - 平滑升级").meta({
         description: "Main header of the slide. Max 20 characters"
     }),

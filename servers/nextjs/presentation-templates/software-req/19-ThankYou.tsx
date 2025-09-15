@@ -1,11 +1,11 @@
 import React from 'react'
 import { z } from 'zod'
 
-export const layoutId = "thank-you-slide"
-export const layoutName = "Thank You Slide"
-export const layoutDescription = "A slide with a centered title and a footer with date and slide number."
+const layoutId = "thank-you-slide"
+const layoutName = "Thank You Slide"
+const layoutDescription = "A slide with a centered title and a footer with date and slide number."
 
-export const Schema = z.object({
+const Schema = z.object({
   title: z.string().min(1).max(100).default("Thank You !").meta({
     description: "The main title of the slide. Max 20 words",
   }),

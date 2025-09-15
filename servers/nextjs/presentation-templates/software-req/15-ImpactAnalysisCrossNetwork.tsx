@@ -1,11 +1,11 @@
 import React from 'react'
 import { z } from 'zod'
 
-export const layoutId = "cross-network-influence-analysis"
-export const layoutName = "DynamicSlideLayout"
-export const layoutDescription = "A slide with a title, description, and footer with date, entity, and slide number."
+const layoutId = "cross-network-influence-analysis"
+const layoutName = "DynamicSlideLayout"
+const layoutDescription = "A slide with a title, description, and footer with date, entity, and slide number."
 
-export const Schema = z.object({
+const Schema = z.object({
     title: z.string().min(3).max(80).default("周边影响分析 - 跨网元").meta({
         description: "Slide title. Max 20 characters",
     }),

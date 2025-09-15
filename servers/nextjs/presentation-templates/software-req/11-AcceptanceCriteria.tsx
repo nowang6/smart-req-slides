@@ -1,11 +1,11 @@
 import React from 'react'
 import { z } from 'zod'
 
-export const layoutId = "验收标准描述"
-export const layoutName = "验收标准描述"
-export const layoutDescription = "一个用于描述验收标准的简洁幻灯片布局。"
+const layoutId = "验收标准描述"
+const layoutName = "验收标准描述"
+const layoutDescription = "一个用于描述验收标准的简洁幻灯片布局。"
 
-export const Schema = z.object({
+const Schema = z.object({
     title: z.string().min(1).max(10).default("验收标准").meta({
         description: "幻灯片标题。",
     }),

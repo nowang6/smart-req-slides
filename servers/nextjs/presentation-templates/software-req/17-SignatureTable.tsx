@@ -1,11 +1,11 @@
 import React from 'react'
 import { z } from 'zod'
 
-export const layoutId = "signature-table-slide"
-export const layoutName = "SignatureTable"
-export const layoutDescription = "A slide with a table for signatures by role."
+const layoutId = "signature-table-slide"
+const layoutName = "SignatureTable"
+const layoutDescription = "A slide with a table for signatures by role."
 
-export const Schema = z.object({
+const Schema = z.object({
     roles: z.array(z.object({
         name: z.string().min(2).max(20).default("特性开发负责人").meta({
             description: "Role name. Max 20 characters",
