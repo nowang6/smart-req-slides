@@ -14,14 +14,14 @@ export const useFileUpload = () => {
       const isPptx = lowerName.endsWith(".pptx");
       const isPdf = lowerName.endsWith(".pdf");
       if (!isPptx && !isPdf) {
-        toast.error("Please select a valid PDF or PPTX file");
+        toast.error("请选择有效的 PDF 或 PPTX 文件");
         return;
       }
 
       // Validate file size (100MB limit)
       const maxSize = 100 * 1024 * 1024; // 100MB
       if (file.size > maxSize) {
-        toast.error("File size must be less than 100MB");
+        toast.error("文件大小必须小于 100MB");
         return;
       }
 

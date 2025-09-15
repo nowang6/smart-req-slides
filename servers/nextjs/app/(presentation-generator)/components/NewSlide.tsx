@@ -33,7 +33,7 @@ const NewSlide = ({
       setShowNewSlideSelection(false);
     } catch (error: any) {
       console.error(error);
-      toast.error("Error adding new slide");
+      toast.error("添加新幻灯片失败");
     }
   };
   const { getFullDataByGroup, loading } = useLayout();

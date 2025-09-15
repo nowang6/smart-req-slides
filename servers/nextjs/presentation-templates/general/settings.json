@@ -1,5 +1,13 @@
 {
     "description": "General purpose layouts for common presentation elements",
     "ordered": false,
-    "default": true
+    "default": true,
+    "layouts": [
+        {
+            "id": "requirements-clarification",
+            "name": "软件需求澄清模板",
+            "description": "用于软件需求澄清会议的标准化模板，包含功能跟踪、团队信息、时间线和审批流程",
+            "path": "requirements-clarification/RequirementsClarificationSlideLayout.tsx"
+        }
+    ]
 } 

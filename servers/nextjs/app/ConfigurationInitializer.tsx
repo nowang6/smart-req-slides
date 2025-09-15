@@ -126,7 +126,7 @@ export function ConfigurationInitializer({ children }: { children: React.ReactNo
                 Initializing Application
               </h3>
               <p className="text-sm text-gray-600 font-inter">
-                Loading configuration and checking model availability...
+                正在加载配置并检查模型可用性...
               </p>
             </div>
 

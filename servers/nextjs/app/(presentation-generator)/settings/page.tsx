@@ -2,8 +2,8 @@ import React from 'react'
 import SettingPage from './SettingPage'
 
 export const metadata = {
-  title: 'Settings | Presenton',
-  description: 'Settings page',
+  title: '设置 | Presenton',
+  description: '设置页面',
 }
 const page = () => {
 

@@ -68,7 +68,7 @@ const SlideCountSelect: React.FC<{
         className="w-[180px] font-instrument_sans font-medium bg-blue-100 border-blue-200 focus-visible:ring-blue-300"
         data-testid="slides-select"
       >
-        <SelectValue placeholder="Select Slides" />
+        <SelectValue placeholder="选择幻灯片数量" />
       </SelectTrigger>
       <SelectContent className="font-instrument_sans">
         {/* Sticky custom input at the top */}
@@ -100,14 +100,14 @@ const SlideCountSelect: React.FC<{
               placeholder="--"
               className="h-8 w-16 px-2 text-sm"
             />
-            <span className="text-sm font-medium">slides</span>
+            <span className="text-sm font-medium">张幻灯片</span>
           </div>
         </div>
 
         {/* Hidden item to allow SelectValue to render custom selection */}
         {value && !SLIDE_OPTIONS.includes(value as SlideOption) && (
           <SelectItem value={value} className="hidden">
-            {value} slides
+            {value} 张幻灯片
           </SelectItem>
         )}
 
@@ -118,7 +118,7 @@ const SlideCountSelect: React.FC<{
             className="font-instrument_sans text-sm font-medium"
             role="option"
           >
-            {option} slides
+            {option} 张幻灯片
           </SelectItem>
         ))}
       </SelectContent>
@@ -146,7 +146,7 @@ const LanguageSelect: React.FC<{
         className="w-[200px] justify-between font-instrument_sans font-semibold overflow-hidden bg-blue-100 hover:bg-blue-100 border-blue-200 focus-visible:ring-blue-300 border-none"
       >
         <p className="text-sm font-medium truncate">
-          {value || "Select language"}
+          {value || "选择语言"}
         </p>
         <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
       </Button>
@@ -154,11 +154,11 @@ const LanguageSelect: React.FC<{
     <PopoverContent className="w-[300px] p-0" align="end">
       <Command>
         <CommandInput
-          placeholder="Search language..."
+          placeholder="搜索语言..."
           className="font-instrument_sans"
         />
         <CommandList>
-          <CommandEmpty>No language found.</CommandEmpty>
+          <CommandEmpty>未找到语言。</CommandEmpty>
           <CommandGroup>
             {Object.values(LanguageType).map((language) => (
               <CommandItem

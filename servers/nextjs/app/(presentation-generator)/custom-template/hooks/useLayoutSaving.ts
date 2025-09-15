@@ -80,7 +80,7 @@ export const useLayoutSaving = (
 
   const saveLayout = useCallback(async (layoutName: string, description: string): Promise<string | null> => {
     if (!slides.length) {
-      toast.error("No slides to save");
+      toast.error("没有可保存的幻灯片");
       return null;
     }
 
@@ -132,7 +132,7 @@ export const useLayoutSaving = (
       }
 
       if (reactComponents.length === 0) {
-        toast.error("No slides were successfully converted");
+        toast.error("没有幻灯片成功转换");
         return null;
       }
       console.log(reactComponents);
@@ -167,7 +167,7 @@ export const useLayoutSaving = (
         return null;
       }
 
-      toast.success("Layout saved successfully");
+      toast.success("模板保存成功");
 
       // Mark all slides as saved (remove modified flag)
       slides.forEach((slide) => {

@@ -26,21 +26,21 @@ export const usePresentationGeneration = (
 
   const validateInputs = useCallback(() => {
     if (!outlines || outlines.length === 0) {
-      toast.error("No Outlines", {
-        description: "Please wait for outlines to load before generating presentation",
+      toast.error("无大纲", {
+        description: "请等待大纲加载完成后再生成演示文稿",
       });
       return false;
     }
 
     if (!selectedLayoutGroup) {
-      toast.error("Select Layout Group", {
-        description: "Please select a layout group before generating presentation",
+      toast.error("选择布局组", {
+        description: "请在生成演示文稿前选择一个布局组",
       });
       return false;
     }
     if (!selectedLayoutGroup.slides.length) {
-      toast.error("No Slide Schema found", {
-        description: "Please select a Group before generating presentation",
+      toast.error("未找到幻灯片架构", {
+        description: "请在生成演示文稿前选择一个组",
       });
       return false;
     }
@@ -67,7 +67,7 @@ export const usePresentationGeneration = (
 
 
     setLoadingState({
-      message: "Generating presentation data...",
+      message: "正在生成演示文稿数据...",
       isLoading: true,
       showProgress: true,
       duration: 30,
@@ -90,8 +90,8 @@ export const usePresentationGeneration = (
       }
     } catch (error: any) {
       console.error('Error In Presentation Generation(prepare).', error);
-      toast.error("Generation Error", {
-        description: error.message || "Error In Presentation Generation(prepare).",
+      toast.error("生成错误", {
+        description: error.message || "演示文稿生成过程中出错(prepare).",
       });
     } finally {
       setLoadingState(DEFAULT_LOADING_STATE);

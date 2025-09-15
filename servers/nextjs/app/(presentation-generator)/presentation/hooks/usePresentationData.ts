@@ -27,7 +27,7 @@ export const usePresentationData = (
       }
     } catch (error) {
       setError(true);
-      toast.error("Failed to load presentation");
+      toast.error("加载演示文稿失败");
       console.error("Error fetching user slides:", error);
       setLoading(false);
     }

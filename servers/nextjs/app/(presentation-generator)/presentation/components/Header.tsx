@@ -91,9 +91,9 @@ const Header = ({
     } catch (error) {
       console.error("Export failed:", error);
       setShowLoader(false);
-      toast.error("Having trouble exporting!", {
+      toast.error("导出遇到问题!", {
         description:
-          "We are having trouble exporting your presentation. Please try again.",
+          "我们在导出您的演示文稿时遇到问题。请重试。",
       });
     } finally {
       setShowLoader(false);
@@ -129,9 +129,9 @@ const Header = ({
 
     } catch (err) {
       console.error(err);
-      toast.error("Having trouble exporting!", {
+      toast.error("导出遇到问题!", {
         description:
-          "We are having trouble exporting your presentation. Please try again.",
+          "我们在导出您的演示文稿时遇到问题。请重试。",
       });
     } finally {
       setShowLoader(false);
@@ -166,7 +166,7 @@ const Header = ({
         variant="ghost"
         className={`pb-4 border-b rounded-none border-gray-300 w-full flex justify-start text-[#5146E5] ${mobile ? "bg-white py-6 border-none rounded-lg" : ""}`} >
         <Image src={PDFIMAGE} alt="pdf export" width={30} height={30} />
-        Export as PDF
+        导出为PDF
       </Button>
       <Button
         onClick={() => {
@@ -177,7 +177,7 @@ const Header = ({
         className={`w-full flex justify-start text-[#5146E5] ${mobile ? "bg-white py-6" : ""}`}
       >
         <Image src={PPTXIMAGE} alt="pptx export" width={30} height={30} />
-        Export as PPTX
+        导出为PPTX
       </Button>
 
 
@@ -189,10 +189,10 @@ const Header = ({
       {/* undo redo */}
       <button onClick={handleReGenerate} disabled={isStreaming || !presentationData} className="text-white  disabled:opacity-50" >
       
-        Re-Generate
+        重新生成
       </button>
       <div className="flex items-center gap-2 ">
-        <ToolTip content="Undo">
+        <ToolTip content="撤销">
         <button disabled={!canUndo} className="text-white disabled:opacity-50" onClick={() => {
           onUndo();
         }}>
@@ -201,7 +201,7 @@ const Header = ({
           
         </button>
           </ToolTip>
-          <ToolTip content="Redo">
+          <ToolTip content="重做">
 
         <button disabled={!canRedo} className="text-white disabled:opacity-50" onClick={() => {
           onRedo();
@@ -224,7 +224,7 @@ const Header = ({
         className="border border-white font-bold text-white rounded-[32px] transition-all duration-300 group"
       >
         <Play className="w-4 h-4 mr-1 stroke-white group-hover:stroke-black" />
-        Present
+        演示
       </Button>
 
       {/* Desktop Export Button with Popover */}
@@ -236,7 +236,7 @@ const Header = ({
           <PopoverTrigger asChild>
             <Button className={`border py-5 text-[#5146E5] font-bold rounded-[32px] transition-all duration-500 hover:border hover:bg-[#5146E5] hover:text-white w-full ${mobile ? "" : "bg-white"}`}>
               <SquareArrowOutUpRight className="w-4 h-4 mr-1" />
-              Export
+              导出
             </Button>
           </PopoverTrigger>
           <PopoverContent align="end" className="w-[250px] space-y-2 py-3 px-2 ">
@@ -256,7 +256,7 @@ const Header = ({
     <>
       <OverlayLoader
         show={showLoader}
-        text="Exporting presentation..."
+        text="正在导出演示文稿..."
         showProgress={true}
         duration={40}
       />

@@ -42,7 +42,7 @@ export default function Home() {
   const [buttonState, setButtonState] = useState<ButtonState>({
     isLoading: false,
     isDisabled: false,
-    text: "Save Configuration",
+    text: "保存配置",
     showProgress: false
   });
 
@@ -61,7 +61,7 @@ export default function Home() {
         ...prev,
         isLoading: true,
         isDisabled: true,
-        text: "Saving Configuration..."
+        text: "正在保存配置..."
       }));
       // API: save config
       trackEvent(MixpanelEvent.Home_SaveConfiguration_API_Call);
@@ -77,23 +77,23 @@ export default function Home() {
           await handleModelDownload();
         }
       }
-      toast.info("Configuration saved successfully");
+      toast.info("配置保存成功");
       setButtonState(prev => ({
         ...prev,
         isLoading: false,
         isDisabled: false,
-        text: "Save Configuration"
+        text: "保存配置"
       }));
       // Track navigation from -> to
       trackEvent(MixpanelEvent.Navigation, { from: pathname, to: "/upload" });
       router.push("/upload");
     } catch (error) {
-      toast.info(error instanceof Error ? error.message : "Failed to save configuration");
+      toast.info(error instanceof Error ? error.message : "保存配置失败");
       setButtonState(prev => ({
         ...prev,
         isLoading: false,
         isDisabled: false,
-        text: "Save Configuration"
+        text: "保存配置"
       }));
     }
   };
@@ -115,7 +115,7 @@ export default function Home() {
       setButtonState({
         isLoading: true,
         isDisabled: true,
-        text: `Downloading Model (${percentage}%)`,
+        text: `正在下载模型 (${percentage}%)`,
         showProgress: true,
         progressPercentage: percentage,
         status: downloadingModel.status
@@ -126,7 +126,7 @@ export default function Home() {
       setTimeout(() => {
         setShowDownloadModal(false);
         setDownloadingModel(null);
-        toast.info("Model downloaded successfully!");
+        toast.info("模型下载成功！");
       }, 2000);
     }
   }, [downloadingModel]);
@@ -150,7 +150,7 @@ export default function Home() {
             <img src="/Logo.png" alt="Presenton Logo" className="h-12" />
           </div>
           <p className="text-gray-600 text-sm">
-            Open-source AI presentation generator
+            开源AI演示文稿生成器
           </p>
         </div>
 
@@ -182,7 +182,7 @@ export default function Home() {
 
               {/* Title */}
               <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                {downloadingModel.done ? "Download Complete!" : "Downloading Model"}
+                {downloadingModel.done ? "下载完成！" : "正在下载模型"}
               </h3>
 
               {/* Model Name */}
@@ -200,7 +200,7 @@ export default function Home() {
                     />
                   </div>
                   <p className="text-sm text-gray-600 mt-2">
-                    {downloadProgress}% Complete
+                    {downloadProgress}% 完成
                   </p>
                 </div>
               )}
@@ -218,9 +218,9 @@ export default function Home() {
               {/* Status Message */}
               {downloadingModel.status && downloadingModel.status !== "pulled" && (
                 <div className="text-xs text-gray-500">
-                  {downloadingModel.status === "downloading" && "Downloading model files..."}
-                  {downloadingModel.status === "verifying" && "Verifying model integrity..."}
-                  {downloadingModel.status === "pulling" && "Pulling model from registry..."}
+                  {downloadingModel.status === "downloading" && "正在下载模型文件..."}
+                  {downloadingModel.status === "verifying" && "正在验证模型完整性..."}
+                  {downloadingModel.status === "pulling" && "正在从注册表拉取模型..."}
                 </div>
               )}
 
@@ -228,8 +228,8 @@ export default function Home() {
               {downloadingModel.downloaded && downloadingModel.size && (
                 <div className="mt-4 p-3 bg-gray-50 rounded-lg">
                   <div className="flex justify-between text-xs text-gray-600">
-                    <span>Downloaded: {(downloadingModel.downloaded / 1024 / 1024).toFixed(1)} MB</span>
-                    <span>Total: {(downloadingModel.size / 1024 / 1024).toFixed(1)} MB</span>
+                    <span>已下载: {(downloadingModel.downloaded / 1024 / 1024).toFixed(1)} MB</span>
+                    <span>总计: {(downloadingModel.size / 1024 / 1024).toFixed(1)} MB</span>
                   </div>
                 </div>
               )}

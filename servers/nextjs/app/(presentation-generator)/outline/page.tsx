@@ -3,8 +3,8 @@ import Header from '@/app/(presentation-generator)/dashboard/components/Header'
 import { Metadata } from 'next'
 import OutlinePage from './components/OutlinePage'
 export const metadata: Metadata = {
-  title: "Outline Presentation",
-  description: "Customize and organize your presentation outline. Drag and drop slides, add charts, and generate your presentation with ease.",
+  title: "演示文稿大纲",
+  description: "自定义和组织您的演示文稿大纲。拖放幻灯片、添加图表，轻松生成演示文稿。",
   alternates: {
     canonical: "https://presenton.ai/create"
   },
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     "AI presentations",
     "data visualization",
     "automatic presentation maker",
-    "professional slides",
+    "专业幻灯片",
     "data-driven presentations",
     "document to presentation",
     "presentation automation",

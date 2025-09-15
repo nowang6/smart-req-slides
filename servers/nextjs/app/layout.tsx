@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     "presentation generator",
     "data to presentation",
     "interactive presentations",
-    "professional slides",
+    "专业幻灯片",
   ],
   openGraph: {
     title: "Presenton - Open Source AI presentation generator",

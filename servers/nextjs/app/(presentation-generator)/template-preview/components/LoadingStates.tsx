@@ -23,10 +23,10 @@ const LoadingStates: React.FC<LoadingStatesProps> = ({ type, message }) => {
 
             <div className="space-y-2">
               <h3 className="text-xl font-semibold text-gray-900">
-                Loading Layouts
+                正在加载模板
               </h3>
               <p className="text-gray-600">
-                {message || "Discovering and loading layout components..."}
+                {message || "正在发现和加载模板组件..."}
               </p>
             </div>
 

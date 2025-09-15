@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "AI presentations",
     "data visualization",
     "automatic presentation maker",
-    "professional slides",
+    "专业幻灯片",
     "data-driven presentations",
     "document to presentation",
     "presentation automation",
@@ -47,7 +47,7 @@ const page = () => {
       <Header />
       <div className="flex flex-col items-center justify-center  py-8">
         <h1 className="text-3xl font-semibold font-instrument_sans">
-          Create Presentation{" "}
+          创建演示文稿{" "}
         </h1>
         {/* <p className='text-sm text-gray-500'>We will generate a presentation for you</p> */}
       </div>

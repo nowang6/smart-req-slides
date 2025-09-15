@@ -46,7 +46,7 @@ const SlideContent = ({ slide, index, presentationId }: SlideContentProps) => {
     ) as HTMLInputElement;
     const value = element?.value;
     if (!value?.trim()) {
-      toast.error("Please enter a prompt before submitting");
+      toast.error("请先输入提示词再提交");
       return;
     }
     setIsUpdating(true);
@@ -60,7 +60,7 @@ const SlideContent = ({ slide, index, presentationId }: SlideContentProps) => {
 
       if (response) {
         dispatch(updateSlide({ index: slide.index, slide: response }));
-        toast.success("Slide updated successfully");
+        toast.success("幻灯片更新成功");
       }
     } catch (error: any) {
       console.error("Error in slide editing:", error);
