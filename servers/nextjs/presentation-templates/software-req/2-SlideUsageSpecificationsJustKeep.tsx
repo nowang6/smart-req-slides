@@ -1,6 +1,10 @@
 import React from 'react'
 import { z } from 'zod'
 
+const layoutId = "2-SlideUsageSpecificationsJustKeep"
+const layoutName = "Slide Usage Specifications Just Keep it"
+const layoutDescription = "A simple slide with a centered title and footer showing date and page number."
+
 const Schema = z.object({
     title: z.string().min(1).max(100).default("澄清胶片使用说明").meta({
         description: "标题，最多100个字符"

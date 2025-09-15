@@ -1,8 +1,8 @@
 import React from 'react'
 import { z } from 'zod'
 
-const layoutId = "simple-title-and-footer-slide"
-const layoutName = "Simple Title and Footer"
+const layoutId = "4-DevelopmentOverviewOwnersSlide"
+const layoutName = "Development Overview Owners Slide"
 const layoutDescription = "A simple slide with a centered title and footer showing date and page number."
 
 const Schema = z.object({
@@ -47,10 +47,5 @@ const dynamicSlideLayout: React.FC<SimpleTitleAndFooterSlideLayoutProps> = ({ da
     )
 }
 
-export default {
-    layoutId,
-    layoutName,
-    layoutDescription,
-    Schema,
-    Component: dynamicSlideLayout
-}
+export default dynamicSlideLayout
+export { layoutId, layoutName, layoutDescription, Schema }

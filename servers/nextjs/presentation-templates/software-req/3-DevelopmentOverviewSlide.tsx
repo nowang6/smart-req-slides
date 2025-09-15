@@ -1,8 +1,8 @@
 import React from 'react'
 import { z } from 'zod'
 
-const layoutId = "development-overview-slide"
-const layoutName = "DynamicSlideLayout"
+const layoutId = "3-DevelopmentOverviewSlide.tsx"
+const layoutName = "Development Overview Slide"
 const layoutDescription = "A slide displaying a table of development details."
 
 const Schema = z.object({

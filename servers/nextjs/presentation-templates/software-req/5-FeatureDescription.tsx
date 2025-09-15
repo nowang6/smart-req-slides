@@ -1,6 +1,7 @@
 import React from 'react'
 import { z } from 'zod'
 
+
 const ImageSchema = z.object({
   __image_url__: z.url().meta({
     description: "URL to image",
@@ -10,8 +11,8 @@ const ImageSchema = z.object({
   }).min(10).max(50),
 })
 
-const layoutId = "feature-description-slide"
-const layoutName = "FeatureDescriptionLayout"
+const layoutId = "5-FeatureDescription"
+const layoutName = "Feature Description Layout"
 const layoutDescription = "A slide with a header, content, and footer."
 
 const Schema = z.object({
